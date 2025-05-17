@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultado do Quiz</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-image: url('quizz2.jpeg'); 
+      background-position: center;
+      background-repeat: repeat;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.95); 
+      padding: 20px 30px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .container h1 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    #resultado {
+      font-size: 24px;
+      font-weight: bold;
+      color: #007bff;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Você acertou</h1>
+    <div id="resultado"></div>
+  </div>
+
+  <script>
+    function mostrar_resultado() {
+      const div_resultado = document.getElementById("resultado");
+      const urlParams = new URLSearchParams(window.location.search);
+      const quantidade_acertada = urlParams.get('quantidade_acertada');
+      const quantidade_perguntas = urlParams.get('quantidade_perguntas');
+      const texto = `${quantidade_acertada}/${quantidade_perguntas}`;
+      div_resultado.innerHTML = texto;
+    }
+    window.onload = mostrar_resultado;
+  </script>
+</body>
+</html>

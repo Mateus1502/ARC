@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz de Perguntas</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-image: url('quizz.jpeg'); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      body {
+    display: block;
+  }
+
+      #form_quizz {
+        background-color: rgba(255, 255, 255, 0.95); 
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 500px;
+        color: #333;
+      }
+
+      #form_quizz h1 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #4a4a4a;
+      }
+
+      #form_quizz div {
+        margin-bottom: 20px;
+      }
+
+      #form_quizz p {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      #form_quizz ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      #form_quizz li {
+        margin-bottom: 10px;
+      }
+
+      #form_quizz label {
+        margin-left: 10px;
+        font-size: 16px;
+        color: #555;
+      }
+
+      #form_quizz input[type="radio"] {
+        cursor: pointer;
+      }
+
+      button[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form_quizz"></form>
+
+    <script src="./quizz.js"></script>
+  </body>
+</html>
